@@ -292,24 +292,6 @@ endfun
 
 let python_highlight_all=1
 
-" path of the diary exists
-" let g:calendar_diary = "~/Dropbox/www/mysphinx/source/blog"
-" let g:calendar_focus_today = 1
-" let g:calendar_mark = 'left'
-" let g:calendar_navi = 'top'
-" let g:calendar_navi_label = 'Prev,Today,Next'
-" let g:calendar_wruler = '日 一 二 三 四 五 六'
-" let g:calendar_monday = 1
-
-" " setting for twitvim
-" let twitvim_enable_python = 1
-" let twitvim_browser_cmd = 'google-chrome'
-" let twitvim_count = 200
-" " let twitvim_proxy = "https://throughtw.appspot.com/api/:80"
-" " let twitvim_login_b64 = "base64string" 
-" " let twitvim_proxy_login_b64 = "Z29ydXNoOnZhbmhhbGVuOTg="
-" " let twitvim_proxy_login = "proxyuser:proxypassword"
-
 " " dirdiff
 " "Sets default exclude pattern: 
 " let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp"
