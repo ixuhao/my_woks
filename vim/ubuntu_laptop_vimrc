@@ -1,0 +1,342 @@
+set nocompatible
+source $VIMRUNTIME/vimrc_example.vim
+source $VIMRUNTIME/mswin.vim
+
+if version >= 603
+    set helplang=cn
+endif
+
+" pathogen
+" call pathogen#infect()
+
+syntax on
+" vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'ervandew/supertab'
+Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'Rykka/riv.vim'
+Bundle 'moll/vim-node'
+Bundle 'godlygeek/tabular'
+Bundle 'walm/jshint.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'jpythonfold.vim'
+Bundle 'ZenCoding.vim'
+"Bundle 'amitdev/vimpy'
+filetype plugin indent on
+
+" taglist
+map <leader>P :TlistToggle<CR>
+" map <Leader>T :TaskList<CR>
+" let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
+" get local dictionary tags
+" map <Leader>tag <leader>cd:!ctags -R<CR>
+
+if has("unix")
+  map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+  map ,sp :sp <C-R>=expand("%:p:h") . "/" <CR>
+  map ,sa :sav <C-R>=expand("%:p:h") . "/" <CR>
+  map ,w :w <C-R>=expand("%:p:h") . "/" <CR>
+else
+  map ,e :e <C-R>=expand("%:p:h") . "\\" <CR>
+  map ,sp :sp <C-R>=expand("%:p:h") . "\\" <CR>
+  map ,sa :sav <C-R>=expand("%:p:h") . "\\" <CR>
+  map ,w :w <C-R>=expand("%:p:h") . "\\" <CR>
+endif
+
+imap ,fn <C-R>=expand("%:t:r")<CR>
+
+set autoread
+set autoindent
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
+"set noswapfile
+"set viminfo='100,<1000,s100,h,:100,n~/tempfile/.viminfo
+set wildmenu
+"set showtabline=0
+"set ignorecase
+set incsearch
+set cmdheight=2
+set wmh=0
+set linebreak
+"set splitbelow splitright
+
+" set nomh " nomousehide
+" set smarttab
+set ffs=unix,dos,mac
+" set fileencodings=ucs-bom,utf-8,default,latin1         " default value
+"set bomb
+set expandtab
+set textwidth=79
+set softtabstop=4
+set shiftwidth=4
+set formatoptions+=mM
+"set guifont=YaHei Consolas Hybrid:h11:cANSI
+
+" CTRL-A, CTRL-X
+set nrformats=hex
+
+set makeef=error.err " When using make, where should it dump the file
+
+"augroup filetype
+"  au! BufRead,BufNewFile *.proto setfiletype proto
+"augroup end
+
+nmap <F2> :set invhlsearch<CR>
+nmap <F3> :set invignorecase<CR>
+" map <F5> :!python %<CR>
+map <F6> :shell<CR>
+
+nmap <F10> :e ++enc=cp936<CR>
+map <Leader>cd :cd %:p:h<CR>
+
+"map <F10> :pyfile ~/tools/addnum.py<CR>
+
+map ;; :%s:::g<Left><Left><Left>
+map ;' :%s:::cg<Left><Left><Left><Left>
+cmap ;\ \(\)<Left><Left>
+map <C-K> <C-W>k<C-W>_
+map <C-J> <C-W>j<C-W>_
+
+nmap <up> gk
+nmap <down> gj
+
+" nmap <leader>fd :se ff=dos<cr>
+" nmap <leader>fu :se ff=unix<cr>
+"vnoremap $1 <esc>`>a)<esc>`<i(<esc>
+"vnoremap $2 <esc>`>a]<esc>`<i[<esc>
+"vnoremap $3 <esc>`>a}<esc>`<i{<esc>
+"vnoremap $$ <esc>`>a><esc>`<i<<esc>
+"vnoremap $q <esc>`>a'<esc>`<i'<esc>
+"vnoremap $w <esc>`>a"<esc>`<i"<esc>
+"inoremap ( ()<esc>:let leavechar=")"<cr>i
+"inoremap [ []<esc>:let leavechar="]"<cr>i
+"inoremap { {}<esc>:let leavechar="}"<cr>i
+"inoremap $$ {<esc>o}<esc>:let leavechar="}"<cr>O
+"inoremap $q ''<esc>:let leavechar="'"<cr>i
+"inoremap $w ""<esc>:let leavechar='"'<cr>i
+"imap <m-l> <esc>:exec "normal f" . leavechar<cr>a
+"au BufNewFile,BufRead *.\(vim\)\@! inoremap " ""<esc>:let leavechar='"'<cr>i
+"au BufNewFile,BufRead *.\(txt\)\@! inoremap ' ''<esc>:let leavechar="'"<cr>i
+
+ia xdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+ia xname Xu Hao
+
+func! CurrentFileDir(cmd)
+  return a:cmd . " " . expand("%:p:h") . "/"
+endfunc
+
+"autocmd BufWrite *.{py} :call CheckSyntax()
+"" Functions
+function PylintReport()
+    setlocal makeprg=(echo\ '[%]';\ pylint\ %)
+    setlocal efm=%+P[%f],%t:\ %#%l:%m
+    silent make
+    cwindow
+    exe "!clear"
+    exe ":redraw!"
+endfunction
+
+function CheckSyntax()
+    setlocal makeprg=(echo\ '[%]';\ pylint\ --reports=n\ %)
+    setlocal efm=%+P[%f],%t:\ %#%l:%m
+    silent make
+    cwindow
+    exe "!clear"
+    exe ":redraw!"
+endfunction
+
+cno $h e ~/
+cno $d e ~/桌面/
+cno $j e ./
+cno $c e <C-\>CurrentFileDir("e")<cr>
+cno $th tabnew ~/
+cno $td tabnew ~/桌面/
+
+cnoremap <C-A>  <Home>
+cnoremap <C-E>  <End>
+cnoremap <C-K>  <C-U>
+
+if has("gui_running")
+      set guioptions=aegit
+      colorscheme desert
+      set guifont=Monospace\ Regular\ 10
+" else
+"     set t_Co=256
+"     set background=dark                 " Set dark background.
+"     colorscheme morning
+"     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+"     match OverLength /\%79v.*/
+"     "set cursorline                      " Highlights cursor row.
+"     "colorscheme zenburn
+"     " let moria_style='light'
+"     " let moria_monochrome=1
+"     " let moria_fontface='mixed'
+endif
+
+function! CurDir()
+  let curdir = substitute(getcwd(), '/Users/amir/', "~/", "g")
+  return curdir
+endfunction
+function! CurTime()
+    let ftime=""
+    let ftime=ftime." ".strftime("%a %Y,%b,%d - %H:%M")
+    return ftime
+endfunction
+function! FileTime()
+  let ext=tolower(expand("%:e"))
+  let fname=tolower(expand('%<'))
+  let filename=fname . '.' . ext
+  let msg=""
+  let msg=msg." ".strftime("(Modified %Y %m %d - %H:%M)",getftime(filename))
+  return msg
+endfunction
+
+set statusline=%<%f%h%m%r\ [%{CurDir()}]%=\ 0x%B\ %b\ %Y\ %{&ff}\ %{&enc}\ %{&fenc}\ %l\/\%L,%c%V\ %P
+
+set laststatus=2 "always show statusline
+"set titlestring=%<\ %=%F%m%r%w
+"set titlestring=%t\ %{CurTime()}\ %{FileTime()}
+
+function! Foldsearch(search)
+        normal zE
+        " erase all folds to begin with
+        normal G$
+        " move to the end of the file
+        let folded = 0     "flag to set when a fold is found
+        let flags = "w"    "allow wrapping in the search
+        let line1 =  0     "set marker for beginning of fold
+        while search(a:search, flags) > 0
+                let  line2 = line(".")
+                "echo "pattern found at line # " line2
+                if (line2 -1 > line1)
+                        "echo line1 . ":" . (line2-1)
+                        "echo "A fold goes here."
+                        execute ":" . line1 . "," . (line2-1) . "fold"
+                        let folded = 1       "at least one fold has been found
+                endif
+                let line1 = line2     "update marker
+                let flags = "W"       "turn off wrapping
+        endwhile
+        " Now create the last fold which goes to the end of the file.
+        normal $G
+        let  line2 = line(".")
+        "echo "end of file found at line # " line2
+        if (line2  > line1 && folded == 1)
+                "echo line1 . ":" . line2
+                "echo "A fold goes here."
+                execute ":". line1 . "," . line2 . "fold"
+        endif
+endfunction
+
+command! -nargs=+ -complete=command Fs call Foldsearch(<q-args>)
+
+set dictionary=~/.vim/words/words
+"set complete+=k
+" XDict {{{
+" dictionary by Python
+" written by toc
+"python << EOF
+"import vim
+"from dictdlib import DictDB
+"path='e:/vim/vimfiles/xdict/xdict'
+"db = DictDB(path)
+"EOF
+"
+"function! UseXdict()
+"python << EOF
+"vim.command('let isk_bak=&isk')
+"vim.command('set isk=-,a-z,A-Z')
+"word = vim.eval('expand("<cword>")')
+"vim.command('let &isk=isk_bak')
+"try:
+"     word = db.getdef(word.lower())[0]
+"     print word.decode('utf8').encode(vim.eval('&encoding'))
+"except:
+"     print 'I unknown :`('
+"EOF
+"endfunction
+"
+"nnoremap <silent> <leader>xd :call UseXdict()<CR>
+" }}}
+
+nnoremap <leader>h yyp^v$r
+" vimtip 724 & 750
+"autocmd bufenter *.rst setl formatoptions+=tqn
+"autocmd bufenter *.rst setl formatlistpat=^\\s*\\(\\d\\+\\\|[a-z]\\)[\\].)]\\s*
+"au BufNewFile,BufRead *.rst Vst foldr
+au FileType html,css setl shiftwidth=2
+au FileType html,css setl tabstop=2
+au FileType python setl shiftwidth=4
+au FileType python setl tabstop=4
+au FileType vim,javascript setl shiftwidth=2
+au FileType vim,javascript setl tabstop=2
+"au BufNewFile,BufRead *.moin setf moin
+"au FileType python setl iskeyword+=.
+autocmd BufNewFile  *.py 0r ~/.vim/skeleton.py
+autocmd BufWritePre,FileWritePre *.py ks|call LastMod()|'s
+fun LastMod()
+  if line("$") > 20
+    let l = 20
+  else
+    let l = line("$")
+  endif
+  exe "1," . l . "g/Last modified: /s/Last modified: .*/Last modified: " .
+  \ strftime("%c")
+  "\ strftime("%Y %b %d")
+endfun
+
+let python_highlight_all=1
+
+" path of the diary exists
+" let g:calendar_diary = "~/Dropbox/www/mysphinx/source/blog"
+" let g:calendar_focus_today = 1
+" let g:calendar_mark = 'left'
+" let g:calendar_navi = 'top'
+" let g:calendar_navi_label = 'Prev,Today,Next'
+" let g:calendar_wruler = '日 一 二 三 四 五 六'
+" let g:calendar_monday = 1
+
+" " setting for twitvim
+" let twitvim_enable_python = 1
+" let twitvim_browser_cmd = 'google-chrome'
+" let twitvim_count = 200
+" " let twitvim_proxy = "https://throughtw.appspot.com/api/:80"
+" " let twitvim_login_b64 = "base64string" 
+" " let twitvim_proxy_login_b64 = "Z29ydXNoOnZhbmhhbGVuOTg="
+" " let twitvim_proxy_login = "proxyuser:proxypassword"
+
+" " dirdiff
+" "Sets default exclude pattern: 
+" let g:DirDiffExcludes = "CVS,*.class,*.exe,.*.swp"
+" "Sets default ignore pattern: 
+" let g:DirDiffIgnore = "Id:,Revision:,Date:" 
+" "If DirDiffSort is set to 1, sorts the diff lines. 
+" "let g:DirDiffSort = 1 
+" "Sets the diff window (bottom window) height (rows) 
+" "let g:DirDiffWindowSize = 14 
+" "Ignore case during diff 
+" "let g:DirDiffIgnoreCase = 0 
+
+"Dynamically figure out the diff text.  If you are using and i18n version 
+"of diff, this will try to get the specific diff text during runtime.  It's 
+"turned off by default.  If you are always targetting a specific version of 
+"diff, you can turn this off and set the DirDiffText* variables 
+"accordingly. 
+"let g:DirDiffDynamicDiffText = 0 
+
+"String used for the English equivalent "Files " 
+"let g:DirDiffTextFiles = "Files " 
+
+"String used for the English equivalent " and " 
+"let g:DirDiffTextAnd = " and " 
+
+"String used for the English equivalent " differ") 
+"let g:DirDiffTextDiffer = " differ" 
+
+"String used for the English equivalent "Only in ") 
+"let g:DirDiffTextOnlyIn = "Only in " 
