@@ -1,0 +1,79 @@
+" vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'asins/vimcdoc'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-fugitive'
+Bundle 'vim-scripts/Emmet.vim'
+Bundle 'scrooloose/syntastic'
+Bundle 'jmcantrell/vim-virtualenv'
+Bundle 'Rykka/riv.vim'
+"Bundle 'vim-scripts/pep8'
+Bundle 'jpythonfold.vim'
+"Bundle 'tpope/vim-fugitive'
+
+filetype plugin indent on
+
+if version >= 603
+    set helplang=cn
+endif
+
+if has("unix")
+  map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+  map ,sp :sp <C-R>=expand("%:p:h") . "/" <CR>
+  map ,sa :sav <C-R>=expand("%:p:h") . "/" <CR>
+  map ,w :w <C-R>=expand("%:p:h") . "/" <CR>
+else
+  map ,e :e <C-R>=expand("%:p:h") . "\\" <CR>
+  map ,sp :sp <C-R>=expand("%:p:h") . "\\" <CR>
+  map ,sa :sav <C-R>=expand("%:p:h") . "\\" <CR>
+  map ,w :w <C-R>=expand("%:p:h") . "\\" <CR>
+endif
+
+set autoread
+set autoindent
+set wildmenu
+set cmdheight=2
+set wmh=0
+set linebreak
+set expandtab
+set textwidth=79
+set softtabstop=4
+set shiftwidth=4
+set formatoptions+=mM
+"set ffs=unix,dos,mac
+
+" CTRL-A, CTRL-X
+set nrformats=hex
+
+set hlsearch
+" nmap <F2> :set invhlsearch<CR>
+map <F6> :shell<CR>
+nmap <F5> :e ++enc=cp936<CR>
+map <Leader>cd :cd %:p:h<CR>
+map ;; :%s:::g<Left><Left><Left>
+cmap ;\ \(\)<Left><Left>
+map <C-K> <C-W>k<C-W>_
+map <C-J> <C-W>j<C-W>_
+
+ia xdate <c-r>=strftime("%Y-%m-%d %H:%M:%S")<cr>
+ia xname Xu Hao
+
+function! CurDir()
+  let curdir = substitute(getcwd(), '/Users/haoxu/', "~/", "g")
+  return curdir
+endfunction
+
+set statusline=%<%f%h%m%r\ [%{CurDir()}]\ [%{fugitive#statusline()}]%=\ 0x%B\ %b\ %Y\ %{&ff}\ %{&enc}\ %{&fenc}\ %l\/\%L,%c%V\ %P
+set laststatus=2 "always show statusline
+
+au FileType html,css setl shiftwidth=2
+au FileType html,css setl tabstop=2
+au FileType python setl shiftwidth=4
+au FileType python setl tabstop=4
+au FileType vim,javascript setl shiftwidth=2
+au FileType vim,javascript setl tabstop=2

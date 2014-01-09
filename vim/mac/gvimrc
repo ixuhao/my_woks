@@ -1,0 +1,5 @@
+colorscheme desert
+set guifont=Menlo:h18
+set lines=40
+set columns=120
+set guioptions-=r
