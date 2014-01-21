@@ -1,6 +1,6 @@
 # coding: utf-8
 # Last modified: 2014 Jan 21 01:25:43 PM
-# easily extended with logging, threading, etc.
+# Todo: easily extended with logging, threading, etc.
 
 import os
 import subprocess
