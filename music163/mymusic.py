@@ -1,11 +1,11 @@
 # coding: utf-8
 # xh
+# according to NeteaseCloudMusic.py @author: Yang Junyong <yanunon@gmail.com>
 
 import json
 import urllib
 import urllib2
 import pprint
-import requests
 
 # API
 API = {
@@ -27,6 +27,7 @@ def save_json(j, dst):
         pprint.pprint(j, f)
 
 def search(name):
+    """ return songs, artists, albums, playlists, etc"""
     search_url = API['search']
     params = {
             's': name,
@@ -35,12 +36,50 @@ def search(name):
     }
 
     params = urllib.urlencode(params)
-    #resp = urllib2.urlopen(search_url, params)
     req = urllib2.Request(search_url, params, HEADERS)
     resp = urllib2.urlopen(req)
     artists = json.loads(resp.read())
     return artists
-    #return requests.get(params).json()
 
-s = search('Maroon')
-save_json(s, 'Maroon_5.txt')
+def get_song_by_id(sid):
+    """ return song detail """
+    query_url = API['detail']
+    params = {
+            'id': sid,
+            'ids': '[' + sid + ']',
+            'csrf_token': ''
+            }
+    params = urllib.urlencode(params)
+    req = urllib2.Request(query_url, params, HEADERS)
+    resp = urllib2.urlopen(req)
+    return json.loads(resp.read())
+
+def download_mp3(url, name):
+    m = urllib2.urlopen(url)
+    with open(name+'.mp3', 'wb') as f:
+        f.write(m.read())
+
+# search demo
+#s = search('Maroon 5')
+#save_json(s, 'Maroon_5.txt')
+#print s['result']['artists'][0]
+#s = search('Radioactive')
+#save_json(s, 'search_results.txt')
+#for song in s['result']['songs']:
+#    print song['name']
+#    print song['artists'][0]['name']
+#    print song['id']
+
+# download 外面的世界 莫文蔚 276904
+#s = get_song_by_id('276904')
+s = get_song_by_id('67143')
+#save_json(s, 'songs_results.txt')
+song = s['songs'][0]
+song_name = song['name']
+song_artists = song['artists']
+artist_name = ''.join(i['name'] for i in song_artists)
+mp3_name = song_name + '_' + artist_name
+print mp3_name
+mp3_url = song['mp3Url']
+print mp3_url
+download_mp3(mp3_url, mp3_name)
