@@ -14,7 +14,11 @@ Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'Rykka/riv.vim'
 "Bundle 'vim-scripts/pep8'
 Bundle 'jpythonfold.vim'
-"Bundle 'tpope/vim-fugitive'
+Bundle 'pangloss/vim-javascript'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 filetype plugin indent on
 
@@ -71,9 +75,9 @@ endfunction
 set statusline=%<%f%h%m%r\ [%{CurDir()}]\ [%{fugitive#statusline()}]%=\ 0x%B\ %b\ %Y\ %{&ff}\ %{&enc}\ %{&fenc}\ %l\/\%L,%c%V\ %P
 set laststatus=2 "always show statusline
 
-au FileType html,css setl shiftwidth=2
-au FileType html,css setl tabstop=2
+"au FileType html,css setl shiftwidth=2
+"au FileType html,css setl tabstop=2
 au FileType python setl shiftwidth=4
 au FileType python setl tabstop=4
-au FileType vim,javascript setl shiftwidth=2
-au FileType vim,javascript setl tabstop=2
+au FileType vim setl shiftwidth=2
+au FileType vim setl tabstop=2
