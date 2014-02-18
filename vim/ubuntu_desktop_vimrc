@@ -15,6 +15,12 @@ Bundle 'ervandew/supertab'
 Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'vim-scripts/pep8'
 Bundle 'vim-scripts/jpythonfold.vim'
+Bundle 'mattn/emmet-vim'
+Bundle 'pangloss/vim-javascript'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "honza/vim-snippets"
 
 "Bundle 'jpythonfold'
 "Bundle 'pep8'
