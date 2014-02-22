@@ -1,0 +1,14 @@
+Source:
+
+Change a Dict to a Class
+http://www.blog.pythonlibrary.org/2014/02/14/python-101-how-to-change-a-dict-into-a-class/
+
+but what about a nested dictionary?
+google: nested dictionary to object python
+http://stackoverflow.com/questions/5290715/complex-transforming-nested-dictionaries-into-objects-in-python
+http://stackoverflow.com/questions/1305532/convert-python-dict-to-object
+
+
+other:
+implement nested dictionaries in python
+http://stackoverflow.com/questions/635483/what-is-the-best-way-to-implement-nested-dictionaries-in-python
