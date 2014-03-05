@@ -28,14 +28,20 @@ class DictToObj(object):
         attrs = str([x for x in dir(self) if '__' not in x])
         return "<DictToObj>: %s" % attrs
 
+def Upper(s):
+    return s.upper()
+
 if __name__ == '__main__':
     ball_dict = {"color":"blue",
                  "size":"8 inches",
                  "material":"rubber"}
     ball = Dict2Obj(ball_dict)
     ball.color = 'red'
-    ball.key = 'key'
-    print ball.__dict__
+    ball.key = 'my key'
+    for k in ball.__dict__:
+        if 'k' in k:
+            setattr(ball, k, lambda s: s.upper())
+            print getattr(ball, k)
 
     # if really just want to quickly convert dict to object
     dc = type('D', (object,), ball_dict)()
