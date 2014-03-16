@@ -8,6 +8,7 @@ Bundle 'asins/vimcdoc'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
+" zen of html
 Bundle 'vim-scripts/Emmet.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'jmcantrell/vim-virtualenv'
@@ -19,6 +20,12 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
+"node
+Bundle "moll/vim-node"
+Bundle "jamescarr/snipmate-nodejs"
+"dash
+Bundle 'rizzatti/funcoo.vim'
+Bundle 'rizzatti/dash.vim'
 
 filetype plugin indent on
 
