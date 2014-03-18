@@ -8,29 +8,49 @@ Bundle 'asins/vimcdoc'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-fugitive'
-" zen of html
+" zen coding
 Bundle 'vim-scripts/Emmet.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'jmcantrell/vim-virtualenv'
 Bundle 'Rykka/riv.vim'
 "Bundle 'vim-scripts/pep8'
 Bundle 'jpythonfold.vim'
-Bundle 'pangloss/vim-javascript'
+
+"Syntax
+"Bundle 'pangloss/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'digitaltoad/vim-jade'
+
+" Colorschemes
+Bundle 'altercation/vim-colors-solarized'
+
+" Completion
+Bundle 'ahayman/vim-nodejs-complete'
+
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 Bundle "honza/vim-snippets"
-"node
+"node general - gf
 Bundle "moll/vim-node"
+"node snippets
 Bundle "jamescarr/snipmate-nodejs"
 "dash
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
+syntax on
 filetype plugin indent on
 
 if version >= 603
     set helplang=cn
+endif
+
+if has('gui_running')
+  set background=light
+  colorscheme solarized
+else
+  set background=dark
 endif
 
 if has("unix")
