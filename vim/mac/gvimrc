@@ -2,5 +2,5 @@
 
 set guifont=Menlo:h18
 set lines=53
-set columns=82
+set columns=120
 set guioptions-=r

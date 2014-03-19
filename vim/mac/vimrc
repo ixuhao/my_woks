@@ -109,5 +109,5 @@ set laststatus=2 "always show statusline
 "au FileType html,css setl tabstop=2
 au FileType python setl shiftwidth=4
 au FileType python setl tabstop=4
-au FileType vim setl shiftwidth=2
-au FileType vim setl tabstop=2
+au FileType vim,javascript setl shiftwidth=2
+au FileType vim,javascript setl tabstop=2
