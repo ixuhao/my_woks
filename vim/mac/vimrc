@@ -39,6 +39,9 @@ Bundle "jamescarr/snipmate-nodejs"
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
 
+Bundle 'tpope/vim-surround'
+Bundle 'jiangmiao/auto-pairs'
+
 syntax on
 filetype plugin indent on
 
