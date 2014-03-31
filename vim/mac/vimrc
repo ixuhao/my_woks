@@ -111,3 +111,4 @@ au FileType python setl shiftwidth=4
 au FileType python setl tabstop=4
 au FileType vim,javascript setl shiftwidth=2
 au FileType vim,javascript setl tabstop=2
+au FileType javascript call JavaScriptFold()
