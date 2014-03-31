@@ -27,14 +27,16 @@ Bundle 'altercation/vim-colors-solarized'
 " Completion
 Bundle 'ahayman/vim-nodejs-complete'
 
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 "node general - gf
-Bundle "moll/vim-node"
-"node snippets
-Bundle "jamescarr/snipmate-nodejs"
+Bundle 'moll/vim-node'
+
+"node snippets; dump this to vim-snippets
+" Bundle 'jamescarr/snipmate-nodejs'
+
 "dash
 Bundle 'rizzatti/funcoo.vim'
 Bundle 'rizzatti/dash.vim'
