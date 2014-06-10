@@ -1,0 +1,48 @@
+Learning
+========
+
+git server on ssh
+-----------------
+
+1. install git and ssh
+
+2. add 'git' user and add password for 'git':
+
+    sudo adduser git
+
+3. access setup
+
+client:
+
+    $ ssh-keygen -t rsa -C 'email@gmail.com'
+    $ scp ~/.ssh/rsa_id.pub user@host:/pash/rsa_client_id.pub
+
+add client key to server's 'authorized\_keys' file:
+
+    $ cat /path/rsa_client_id.pub >> ~/.ssh/authorized_keys
+    $ sudo chown git:git authorized_keys
+
+4. init Git repo
+
+server path:
+
+    $ git init --bare project.git
+
+    #or ...
+    $ git clone --bare project project.git 
+    (project)$ git remote update origin ssh://git@localhost:/path/project.git
+    #or ......
+    (project)$ git remote add shared ../path/project.git
+
+    #and change owner to 'git'  
+    $ sudo chown -R git:git project.git
+
+client:
+
+    $ git clone ssh://git@host:/path/project.git
+
+5. reference
+
+http://github.com/guides/providing-your-ssh-key
+http://wlog.cn/soft/git-ssh-server-for-debian.html
+http://git-scm.com/book/zh/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E6%9E%B6%E8%AE%BE%E6%9C%8D%E5%8A%A1%E5%99%A8
