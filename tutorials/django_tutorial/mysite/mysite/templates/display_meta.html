@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Display Meta Info{% endblock %}
+{% block content %}
+    <p>Request Path: {{ rpath }}</p>
+    <table>
+    {% for k, v in mvalues %} 
+        <tr>
+            <td>{{ k }}</td>
+            <td>{{ v }}</td>
+        </tr>
+    {% empty %}
+        <li>Sorry, no items</li>
+    {% endfor %}
+    </table>
+{% endblock %}
