@@ -3,6 +3,7 @@ from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from mysite.views import hello, current_datetime, hours_ahead, display_meta
 from books import views
+from contact import views as contact_views
 
 admin.autodiscover()
 
@@ -20,4 +21,5 @@ urlpatterns = patterns('',
     url(r'^mymeta/$', display_meta),
     #url(r'^search-form/$', views.search_form),
     url(r'^search/$', views.search),
+    url(r'^contact/$', contact_views.contact),
 )
