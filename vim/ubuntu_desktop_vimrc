@@ -1,4 +1,4 @@
-
+" vundle
 set nocompatible
 filetype off 
 source $VIMRUNTIME/vimrc_example.vim
@@ -8,24 +8,55 @@ behave mswin
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 Bundle 'gmarik/vundle'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/syntastic'
+Bundle 'asins/vimcdoc'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
+Bundle 'tpope/vim-fugitive'
+" zen coding
+Bundle 'vim-scripts/Emmet.vim'
+Bundle 'scrooloose/syntastic'
 Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'vim-scripts/pep8'
+Bundle 'Rykka/riv.vim'
+"Bundle 'vim-scripts/pep8'
 Bundle 'vim-scripts/jpythonfold.vim'
-Bundle 'mattn/emmet-vim'
-Bundle 'pangloss/vim-javascript'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
-Bundle "honza/vim-snippets"
+
+"Syntax
+"Bundle 'pangloss/vim-javascript'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'digitaltoad/vim-jade'
+"Bundle 'mattn/emmet-vim'
+
+" Colorschemes
+"Bundle 'altercation/vim-colors-solarized'
+
+" Completion
+Bundle 'ahayman/vim-nodejs-complete'
+
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+"node general - gf
+Bundle 'moll/vim-node'
+
+"node snippets; dump this to vim-snippets
+" Bundle 'jamescarr/snipmate-nodejs'
 
 "Bundle 'jpythonfold'
 "Bundle 'pep8'
 "Bundle 'pyflakes-vim'
 "Bundle 'vimpy'
+
+Bundle 'tpope/vim-surround'
+Bundle 'jiangmiao/auto-pairs'
+
+"note
+Bundle 'xolox/vim-misc'
+Bundle 'xolox/vim-notes'
+
+" octopress
+Bundle 'tangledhelix/vim-octopress'
+autocmd BufNewFile,BufRead *.markdown,*.textile,*.md set filetype=octopress
 
 set nobackup
 set showcmd
@@ -35,7 +66,12 @@ set autoindent
 set cindent
 set wildmenu
 
+syntax on
 filetype plugin indent on
+
+if version >= 603
+    set helplang=cn
+endif
 
 " set nu
 set formatoptions+=mM
@@ -49,7 +85,6 @@ set nrformats=hex
 set laststatus=2 "always show statusline
 set completeopt=menuone,longest,preview
 
-syntax on
 
 map <Leader>cd :cd %:p:h<CR>
 map ;; :%s:::g<Left><Left><Left>
@@ -71,4 +106,15 @@ fun LastMod()
   \ strftime("%Y %b %d %X")
 endfun
 
+function! CurDir()
+  let curdir = substitute(getcwd(), '/Users/haoxu/', "~/", "g")
+  return curdir
+endfunction
+
+set statusline=%<%f%h%m%r\ [%{CurDir()}]\ [%{fugitive#statusline()}]%=\ 0x%B\ %b\ %Y\ %{&ff}\ %{&enc}\ %{&fenc}\ %l\/\%L,%c%V\ %P
+set laststatus=2 "always show statusline
+
 "call pathogen#infect()
+au FileType vim,javascript setl shiftwidth=2
+au FileType vim,javascript setl tabstop=2
+au FileType javascript call JavaScriptFold()
