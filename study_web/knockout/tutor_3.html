@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>knockout tutorial 3</title>
+    <link rel="stylesheet" href="http://learn.knockoutjs.com/Content/TutorialSpecific/webmail.css"/>
+</head>
+<body>
+<ul class="folders" data-bind="foreach: folders">
+    <li data-bind="text: $data,
+            css: { selected: $data == $root.chosenFolderId() },
+            click: $root.goToFolder"></li>
+</ul>
+
+<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="../js/knockout-3.2.0.js"></script>
+<script type="text/javascript">
+    function WebMailViewModel() {
+        var self = this;
+        self.folders = ['Inbox', 'Archive', 'Sent', 'Spam'];
+        self.chosenFolderId = ko.observable();
+        self.chosenFolderData = ko.observable();
+
+        self.goToFolder = function (folder) {
+            self.chosenFolderId(folder);
+            //$.support.cors = true;
+            $.support.
+            $.get('http://learn.knockoutjs.com/mail', { folder: folder}, self.chosenFolderData);
+        };
+    };
+    ko.applyBindings(new WebMailViewModel());
+</script>
+
+</body>
+</html>
