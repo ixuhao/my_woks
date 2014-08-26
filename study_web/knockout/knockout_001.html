@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script type="text/javascript" data-main="scripts/init.js" src="scripts/require.js"></script>
+    <title>knockout 001</title>
+</head>
+<body>
+<h1>AMD Loading</h1>
+<h2>Loading Knockout.js and a ViewModel class via RequireJs</h2>
+<p>First name: <input data-bind="value: firstName" /></p>
+<p>First name capitalized: <strong data-bind="text: firstNameCaps"></strong></p>
+
+<h2>Loading Knockout.js, a Binding Handler, and a ViewModel class via RequireJs</h2>
+<p>Second name: <input type="value: secondName, hasFocus: editingName" />
+    <span data-bind="visible: editingName">Your're editing the name!</span>
+</p>
+
+<h3>Meal upgrade</h3>
+<p>Make your light more bearable by selecting a meal to match your social and econmonic status.</p>
+Chosen meal:
+<select data-bind="options: availableMeals, optionsText: 'mealName',
+    value: chosenMeal"></select>
+<p>You've chosen:
+<b data-bind="text: chosenMeal().description"></b>
+(price: <span data-bind="text: chosenMeal().extraCost"></span>)
+</p>
+
+</body>
+</html>
