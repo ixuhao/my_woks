@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+
+        <!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />-->
+        <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.3.min.css" />
+
+        <!--<meta name="msapplication-tap-highlight" content="no" />-->
+
+        <!--Todo: this line is for weinre debug, comment this when release build.-->
+        <script src="http://10.10.54.124:8080/target/target-script-min.js#anonymous"></script>
+
+        <title>Cordova Sample</title>
+        <style>
+            img {max-width: 100; height: auto;}
+        </style>
+    </head>
+    <body>
+        <div data-role="page" id="main">
+            <div data-role="header">
+                <h1>Cordova Sample</h1>
+            </div>
+            <div data-role="content">
+                <ul data-role="listview">
+                    <li><a href="#accelerometer" data-transition="slide">Accelerometer</a></li>
+                    <li><a href="#camera" data-transition="slide">Camera</a></li>
+                    <li><a href="#compass" data-transition="slide">Compass</a></li>
+                    <li><a href="#connection" data-transition="slide">Connection</a></li>
+                    <li><a href="#device" data-transition="slide">Device</a></li>
+                    <li><a href="#geolocation" data-transition="slide">Geolocation</a></li>
+                    <li><a href="#notification" data-transition="slide">Notification</a></li>
+                    <li><a href="#contacts" data-transition="slide">Contacts</a></li>
+                    <li><a href="#file" data-transition="slide">File</a></li>
+                    <li><a href="#inAppBrowser" data-transition="slide">InAppBrowser</a></li>
+                    <li><a href="#storage" data-transition="slide">Storage</a></li>
+                    <li><a href="#database" data-transition="slide">Database</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="page" id="device">
+            <div data-role="header">
+                <a href="button" data-rel="back" data-direction="reverse" data-icon="arrow-l">Back</a>
+                <h1>Deivce</h1>
+            </div>
+            <div data-role="content">
+                <a href="#" data-role="button" id="getDeviceProperties">Get Device Properties</a><br>
+                <div id="deviceProperties">Loading device properties...</div>
+                <br>
+                <br>
+                <br>
+                <a href="#" data-role="button" id="resetDeviceProperties">Reset</a>
+            </div>
+            <script type="text/javascript">
+                document.addEventListener("deviceready", onDeviceReady, false);
+                function onDeviceReady () {
+                    $('#getDeviceProperties').on("click", getDeviceProperties);
+                    $('#resetDeviceProperties').on("click", resetDeviceProperties);
+                }
+                function getDeviceProperties () {
+                    alert('getDeviceProperties');
+                    var element = document.getElementById('deviceProperties');
+
+                    element.innerHTML = "Device Model (Android: product name): " + device.model + '<br />' +
+                            'Cordova version: ' + device.cordova + '<br />' +
+                            'Operation system: ' + device.platform + '<br />' +
+                            'Device UUID: ' + device.uuid + '<br />' +
+                            'Operating system version: ' + device.version + '<br />'
+                }
+                function resetDeviceProperties () {
+                    alert('resetDeviceProperties');
+                    var element = document.getElementById('deviceProperties');
+                    element.innerHTML = "Loading device properties..."
+                }
+            </script>
+        </div>
+        <div data-role="page" id="notification">
+            <div data-role="header">
+                <a href="button" data-rel="back" data-direction="reverse" data-icon="arrow-l">Back</a>
+                <h1>Notification</h1>
+            </div>
+            <div data-role="content">
+                <a href="#" data-role="button" id="showAlert">Show Alert popup</a><br>
+                <a href="#" data-role="button" id="showConfirm">show confirm popup</a><br>
+                <a href="#" data-role="button" id="showPrompt">show prompt popup</a><br>
+                <br><br>
+                <a href="#" data-role="button" id="playBeep">Play Beep popup</a><br>
+                <a href="#" data-role="button" id="vibrate">Vibrate the device</a><br>
+            </div>
+            <script type="text/javascript">
+                document.addEventListener('deviceready', onDeviceReady, false);
+                function onDeviceReady () {
+                    $('#showAlert').on('click', showAlert);
+                    $('#showConfirm').on('click', showConfirm);
+                    $('#showPrompt').on('click', showPrompt);
+                    $('#playBeep').on('click', playBeep);
+                    $('#vibrate').on('click', vibrate);
+                }
+                function showAlert () {
+                    navigator.notification.alert(
+                            'Alert dialog: You are on fire!',
+                            alertDismissed, //callback
+                            'Show Alert Title',
+                            'Done'
+                    );
+                }
+                function alertDismissed () {
+                    alert('You dissmissed the Alert.');
+                }
+                function onConfirm(buttonIndex ) {
+                    alert('You selected button ' + buttonIndex + '\n(button 1 = Restart, button 2 = Exit.)');
+                }
+                function showConfirm () {
+                    navigator.notification.confirm(
+                            'Confirm dialog: You are the winner!',
+                            onConfirm,
+                            'Confirm Title',
+                            ['Restart', 'Exit']
+                    );
+                }
+                function showPrompt () {
+                    navigator.notification.prompt(
+                            'Please enter your name',
+                            onPrompt,
+                            'Prompt Title',
+                            ['OK', 'Exit'],
+                            'Jane Doe?'
+                    );
+
+                }
+                function onPrompt (results) {
+                    alert("You selected button number" + results.buttonIndex + " and entered: " + results.input1 + '\n(button 2 = Exit, button 1 = OK.)');
+                }
+                function playBeep () {
+                    navigator.notification.beep(3);
+                }
+                function vibrate () {
+                    navigator.notification.vibrate(2000);
+                }
+            </script>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery.mobile-1.4.3.min.js"></script>
+        <!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+        <!--
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+        -->
+    </body>
+</html>
