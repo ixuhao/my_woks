@@ -23,9 +23,16 @@
 
         self.goToFolder = function (folder) {
             self.chosenFolderId(folder);
-            //$.support.cors = true;
-            $.support.
-            $.get('http://learn.knockoutjs.com/mail', { folder: folder}, self.chosenFolderData);
+            //$.get('http://learn.knockoutjs.com/mail', { folder: folder}, self.chosenFolderData);
+            $.getJSON('http://learn.knockoutjs.com/mail', { folder: folder}, self.chosenFolderData);
+            //$.ajax({
+            //        url: 'http://learn.knockoutjs.com/mail',
+            //        dataType: 'jsonp',
+            //        processData: false,
+            //        data: {folder: folder},
+            //        type: 'get',
+            //        success: self.chosenFolderData
+            //        });
         };
     };
     ko.applyBindings(new WebMailViewModel());
