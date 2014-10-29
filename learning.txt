@@ -77,8 +77,21 @@ http://www.euperia.com/linux/tools-and-utilities/speed-testing-your-website-with
 
 http://www.euperia.com/linux/tools-and-utilities/speed-testing-your-website-with-siege-part-two/771
 
+## android
+
+### tasker
+
+http://joaoapps.com/autovoice/
+
+http://www.pocketables.com/2013/06/beginners-guide-to-tasker-part-8-autovoice.html
+
+http://lifehacker.com/how-to-create-custom-voice-commands-with-tasker-and-aut-1282209195
+
+http://www.androidcentral.com/hands-free-automation-tasker-and-autovoice-part-1
+
 ## other
 
 ### markdown
 
 http://wowubuntu.com/markdown
+
