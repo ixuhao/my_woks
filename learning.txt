@@ -67,6 +67,8 @@ readlist
 
 [Tutorial for Building SPA using AngularJS](http://bitoftech.net/2014/01/13/tutorial-for-building-spa-using-angularjs-example/)
 
+https://github.com/s16h/py-must-watch
+
 ### knockoutjs
 
 ## performance test
@@ -78,6 +80,14 @@ http://www.euperia.com/linux/tools-and-utilities/speed-testing-your-website-with
 http://www.euperia.com/linux/tools-and-utilities/speed-testing-your-website-with-siege-part-two/771
 
 ## android
+
+### development
+
+http://www.androiddevtools.cn/
+
+http://hukai.me/android-training-course-in-chinese/testing/activity-testing/activity-function-testing.html
+
+https://github.com/shantanusharma/android_platform_frameworks_base/tree/master/docs/downloads/training
 
 ### tasker
 
@@ -95,3 +105,6 @@ http://www.androidcentral.com/hands-free-automation-tasker-and-autovoice-part-1
 
 http://wowubuntu.com/markdown
 
+http://joeyh.name/blog/entry/a_programmable_alarm_clock_using_systemd/
+
+https://mariadb.com/kb/zh-cn/mariadb/3026/a-mariadb-primer-01-intro/
