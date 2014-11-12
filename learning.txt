@@ -89,6 +89,10 @@ http://hukai.me/android-training-course-in-chinese/testing/activity-testing/acti
 
 https://github.com/shantanusharma/android_platform_frameworks_base/tree/master/docs/downloads/training
 
+This is tips for hybrid native app: http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/
+
+http://stackoverflow.com/questions/11820708/disabling-text-selection-in-phonegap
+
 ### tasker
 
 http://joaoapps.com/autovoice/
