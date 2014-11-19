@@ -93,21 +93,7 @@ This is tips for hybrid native app: http://marcgg.com/blog/2014/04/09/phonegap-s
 
 http://stackoverflow.com/questions/11820708/disabling-text-selection-in-phonegap
 
-### tasker
-
-http://joaoapps.com/autovoice/
-
-http://www.pocketables.com/2013/06/beginners-guide-to-tasker-part-8-autovoice.html
-
-http://lifehacker.com/how-to-create-custom-voice-commands-with-tasker-and-aut-1282209195
-
-http://www.androidcentral.com/hands-free-automation-tasker-and-autovoice-part-1
-
 ## other
-
-### markdown
-
-http://wowubuntu.com/markdown
 
 http://joeyh.name/blog/entry/a_programmable_alarm_clock_using_systemd/
 
