@@ -1,8 +1,6 @@
-Learning
-========
+# Learning
 
-git server on ssh
------------------
+## git server on ssh
 
 1. install git and ssh
 
@@ -46,3 +44,57 @@ client:
 http://github.com/guides/providing-your-ssh-key
 http://wlog.cn/soft/git-ssh-server-for-debian.html
 http://git-scm.com/book/zh/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E6%9E%B6%E8%AE%BE%E6%9C%8D%E5%8A%A1%E5%99%A8
+
+## Web development
+
+### angularjs
+
+[flask and SPA with angularjs](http://yanhua365.lofter.com/post/b417f_1f0361)
+
+[Single Page Apps with AngularJS Routing and Templating](http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating)
+
+[Animating AngularJS Apps: ngView](http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview)
+
+readlist
+
+[Simple single-page applications with Flask? note: there is a mega-tutorial with knockout!](http://www.reddit.com/r/flask/comments/1vpd2g/simple_singlepage_applications_with_flask/)
+
+[angularjs flask template](http://stackoverflow.com/questions/11522151/typical-angular-js-workflow-and-project-structure-with-python-flask)
+
+[angular-flask-login](https://github.com/vollov/angular-flask-login)
+
+["PyCharm Web Magic: Building a Pinterest Clone" pycharm, flask-restless, angular-js](https://www.youtube.com/watch?v=2geC50roans)
+
+[Tutorial for Building SPA using AngularJS](http://bitoftech.net/2014/01/13/tutorial-for-building-spa-using-angularjs-example/)
+
+https://github.com/s16h/py-must-watch
+
+### knockoutjs
+
+## performance test
+
+### siege
+
+http://www.euperia.com/linux/tools-and-utilities/speed-testing-your-website-with-siege-part-one/720
+
+http://www.euperia.com/linux/tools-and-utilities/speed-testing-your-website-with-siege-part-two/771
+
+## android
+
+### development
+
+http://www.androiddevtools.cn/
+
+http://hukai.me/android-training-course-in-chinese/testing/activity-testing/activity-function-testing.html
+
+https://github.com/shantanusharma/android_platform_frameworks_base/tree/master/docs/downloads/training
+
+This is tips for hybrid native app: http://marcgg.com/blog/2014/04/09/phonegap-steroids-hybrid-native-app-tips/
+
+http://stackoverflow.com/questions/11820708/disabling-text-selection-in-phonegap
+
+## other
+
+http://joeyh.name/blog/entry/a_programmable_alarm_clock_using_systemd/
+
+https://mariadb.com/kb/zh-cn/mariadb/3026/a-mariadb-primer-01-intro/
