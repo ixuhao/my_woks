@@ -22,6 +22,8 @@ Configure software proxy settings in ubuntu after change my password.
 
 * .npmrc
 
+    $ npm config set key value
+
     > proxy=http://hao_xu:Qwer!234@proxy.neusoft.com:8080/
     > http_proxy=http://hao_xu:Qwer!234@proxy.neusoft.com:8080
 
