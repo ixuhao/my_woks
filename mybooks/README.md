@@ -13,6 +13,29 @@ Here are my daily notes.
 
 http://wowubuntu.com/markdown
 
+# rsync
+
+http://wiki.ubuntu.com.cn/UbuntuHelp:Rsync/zh
+
+http://www.unixtutorial.org/2008/09/how-to-synchronize-directories-with-rsync/
+
+    ubuntu$ rsync -avz --stats  /tmp/dir1/ /tmp/dir2
+
+http://ubuntuforums.org/showthread.php?t=1632562
+
+    #!/bin/bash
+    #check if the dir exists
+    if [ -d /media/USB2  ]
+    then
+    rsync -acv --delete /home/randy/Documents/ /media/USB2/testbackup/
+    else
+    echo "USB2 is not connected, exiting..."
+    fi
+
+[Linux系统下如何使用rsync进行数据同步](http://www.oschina.net/question/12_7446)
+
+http://wiki.ubuntu.com.cn/UbuntuHelp:Unison
+
 # Todo
 
 * USB Reverse Tethering
