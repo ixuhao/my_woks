@@ -8,4 +8,4 @@ This is the summart of my book.
 * [section 2](section2/README.md)
 * [Articles](articles/README.md)
     * [software](articles/software.md)
-    * [software](articles/tips.md)
+    * [tips](articles/tips.md)
