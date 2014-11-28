@@ -42,7 +42,9 @@ client:
 5. reference
 
 http://github.com/guides/providing-your-ssh-key
+
 http://wlog.cn/soft/git-ssh-server-for-debian.html
+
 http://git-scm.com/book/zh/%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B8%8A%E7%9A%84-Git-%E6%9E%B6%E8%AE%BE%E6%9C%8D%E5%8A%A1%E5%99%A8
 
 ## Web development

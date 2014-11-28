@@ -19,18 +19,22 @@ http://wiki.ubuntu.com.cn/UbuntuHelp:Rsync/zh
 
 http://www.unixtutorial.org/2008/09/how-to-synchronize-directories-with-rsync/
 
-    ubuntu$ rsync -avz --stats  /tmp/dir1/ /tmp/dir2
+```bash
+ubuntu$ rsync -avz --stats  /tmp/dir1/ /tmp/dir2
+```
 
 http://ubuntuforums.org/showthread.php?t=1632562
 
-    #!/bin/bash
-    #check if the dir exists
-    if [ -d /media/USB2  ]
-    then
-    rsync -acv --delete /home/randy/Documents/ /media/USB2/testbackup/
-    else
-    echo "USB2 is not connected, exiting..."
-    fi
+```bash
+#!/bin/bash
+#check if the dir exists
+if [ -d /media/USB2  ]
+then
+rsync -acv --delete /home/randy/Documents/ /media/USB2/testbackup/
+else
+echo "USB2 is not connected, exiting..."
+fi
+```
 
 [Linux系统下如何使用rsync进行数据同步](http://www.oschina.net/question/12_7446)
 
@@ -61,3 +65,41 @@ http://developer.telerik.com/featured/nativescript-a-technical-overview/
 [当 AMD 遇上 FIS](http://blog.jobbole.com/80132/)
 
 https://github.com/fex-team/fis-amd-demo
+
+# Testing
+
+* Android Security
+
+[Android Activtity Security](http://drops.wooyun.org/tips/3936)
+
+[一次app抓包引发的Android分析记录](http://drops.wooyun.org/tips/2871)
+
+[关于zANTI和dsploit两款安卓安全工具的对比](http://drops.wooyun.org/mobile/2503)
+
+[android测试环境搭建](http://drops.wooyun.org/tips/2624)
+
+[Burp Suite使用介绍](http://drops.wooyun.org/tools/1548)
+
+# CV
+
+[Geometric Image Transformations](http://docs.opencv.org/modules/imgproc/doc/geometric_transformations.html)
+
+[SimpleCV TransformPerspective](http://www.simplecv.org/docs/SimpleCV.html#i/SimpleCV.ImageClass.Image/transformPerspective)
+
+[Building a Pokedex in Python: Getting Started](http://www.pyimagesearch.com/2014/03/10/building-pokedex-python-getting-started-step-1-6/)
+
+[4 Point OpenCV getPerspective Transform Example](http://www.tuicool.com/articles/UNRzQbq)
+
+[warping brien](http://uberhip.com/python/image-processing/opencv/2014/10/26/warping-brien/)
+
+# Flask
+
+[Choose Your Own Adventure Presentations with Reveal.js, Python and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html)
+
+[Easy WebSockets with Flask and Gevent](http://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
+
+[Video Streaming with Flask](http://blog.miguelgrinberg.com/post/video-streaming-with-flask)
+
+[Flask mega tutorial Part VI](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars)
+
+[Flask mega tutorial Part V](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins)
