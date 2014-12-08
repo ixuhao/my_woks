@@ -49,6 +49,12 @@ Configure software proxy settings in ubuntu after change my password.
     > proxy=http://hao_xu:Qwer!234@proxy.neusoft.com:8080/
     > http_proxy=http://hao_xu:Qwer!234@proxy.neusoft.com:8080
 
+    $ sudo npm update npm -g
+
+* .curlrc
+
+    > proxy=http://hao_xu:Qwer!234@proxy.neusoft.com:8080/
+
 * pip
 
 still not work
