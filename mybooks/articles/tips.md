@@ -40,20 +40,20 @@ Configure software proxy settings in ubuntu after change my password.
 * .gitconfig
 * /etc/apt/apt.conf
 
-    acquire::http::proxy "http://hao_xu:Qwer!234@proxy.neusoft.com:8080";
+    acquire::http::proxy "http://user:password@proxy.server:port";
 
 * .npmrc
 
     $ npm config set key value
 
-    > proxy=http://hao_xu:Qwer!234@proxy.neusoft.com:8080/
-    > http_proxy=http://hao_xu:Qwer!234@proxy.neusoft.com:8080
+    > proxy=http://user:password@proxy.server:port/
+    > http_proxy=http://user:password@proxy.server:port
 
     $ sudo npm update npm -g
 
 * .curlrc
 
-    > proxy=http://hao_xu:Qwer!234@proxy.neusoft.com:8080/
+    > proxy=http://user:password@proxy.server:port/
 
 * pip
 
