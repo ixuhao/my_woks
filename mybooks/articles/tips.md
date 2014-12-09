@@ -62,3 +62,52 @@ still not work
 ```bash
 $ pip search package --proxy "user:password@proxt.server:port"
 ```
+
+## mplayer
+
+mplayer
+
+```bash
+#!/bin/bash
+mplayer -playlist ~/playlist.txt -loop 0
+```
+
+## android
+
+screenshot
+
+```bash
+#!/bin/bash
+adb shell screencap -p | sed 's/\r$//' > $1
+```
+
+press power
+
+```bash
+adb shell input keyevent 26
+```
+
+## ssh
+
+ssh some server, bad practise.:P
+
+```bash
+#!/bin/bash
+# ssh name1@192.168.100.131
+read -p "Connect to (name1, name2, name3): " yn
+
+if [ "$yn" == "name1" ]; then
+    ssh name1@192.168.100.153
+elif [ "$yn" == "name2" ]; then
+    ssh name2@192.168.100.197
+#elif [ "$yn" == "NO" ] || [ "$yn" == "no" ]; then
+#    echo "Oh, interrupt!"
+elif [ "$yn" == "name3" ]; then
+    ssh name3@192.168.100.199
+else
+    echo "Don't know what your choice is"
+    exit 0
+fi
+```
+
+##
