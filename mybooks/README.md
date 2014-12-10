@@ -107,3 +107,24 @@ https://github.com/fex-team/fis-amd-demo
 # docker
 
 http://www.dockerpool.com/books
+
+set proxy for daemon in /etc/default/docker
+
+# haha
+
+[tangyouyou](http://ww1.sinaimg.cn/bmiddle/61add42ajw1en35qmme5kg209604qhdx.gif)
+
+# raspberry pi
+
+[pi personal cloud](http://www.itproportal.com/2014/08/02/how-to-transform-the-raspberry-pi-into-your-personal-cloud-for-secure-file-access-anywhere/)
+
+tonido is a service in USA, so.... 
+
+owncloud, cozy, nimbus, BitTorrent Sync
+
+http://jack.minardi.org/raspberry_pi/replace-dropbox-with-bittorrent-sync-and-a-raspberry-pi/
+
+http://www.hongkiat.com/blog/free-tools-to-build-personal-cloud/
+
+[40+ Cool Ideas for your Raspberry PI Project](http://pingbin.com/2012/12/30-cool-ideas-raspberry-pi-project/)
+

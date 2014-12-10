@@ -40,7 +40,10 @@ Configure software proxy settings in ubuntu after change my password.
 * .gitconfig
 * /etc/apt/apt.conf
 
-    acquire::http::proxy "http://user:password@proxy.server:port";
+    Acquire::http::proxy "http://user:password@proxy.server:port";
+    Acquire::https::proxy "http://user:password@uer:password@proxy.server:port";
+
+  refer to [proxy authentication not working for HTTPS sources](https://bugs.launchpad.net/ubuntu/+source/apt/+bug/1087512)
 
 * .npmrc
 
@@ -110,4 +113,3 @@ else
 fi
 ```
 
-##
