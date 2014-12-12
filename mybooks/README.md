@@ -128,3 +128,34 @@ http://www.hongkiat.com/blog/free-tools-to-build-personal-cloud/
 
 [40+ Cool Ideas for your Raspberry PI Project](http://pingbin.com/2012/12/30-cool-ideas-raspberry-pi-project/)
 
+# 20141212
+
+## How to choose some items from a list - calculate money...
+
+Today, I get 823 and have to get 600 from these numers.
+
+```python
+import itertools
+
+# taxi tickets
+a = [80, 80, 80, 78, 77, 72, 65, 63, 63, 58, 54, 53]
+
+# the number to collect
+target = 600
+
+s = sum(a) - target
+
+n = 3 # obivious
+
+# use combinations_with_replacement to get a list
+result = list(itertools.combinations_with_replacement(a, n))
+
+b = []
+
+for i in result:
+    b.append(abs(s - sum(i)))
+
+for k, i in enumerate(b):
+    if i == 0: # there it is.
+        print k, result[k]
+```
