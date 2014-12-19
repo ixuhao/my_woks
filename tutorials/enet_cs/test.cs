@@ -11,14 +11,31 @@ using System;
 
 class Test
 {
-	static void Main() {
-		//int[] arr = new int[] {1,2,3,4};
-		int[] arr = {1,2,3,4};
-		for (int i = 0; i < arr.Length; i++)
-			Console.WriteLine(arr[i]);
-		
-		foreach ( int i in arr)
-			Console.WriteLine(i);
-		
+	static void PrintArray(int ArrLength)
+	{
+		int[] arr=new int[ArrLength];
+		for (int i=0;i<arr.Length;i++) 
+			arr[i]=i;
+		Console.WriteLine("Print Array's value");
+		for (int i=0;i<arr.Length;i++)
+			Console.WriteLine("arr[{0}]={1}", i, arr[i]);
+	}
+	static void Main() 
+	{
+		int i=1;
+		while (i>0)
+		{
+			Console.WriteLine("Please enter the array's length:");
+			try {
+				i = Int32.Parse(Console.ReadLine());
+				if (i <= 0)
+					break;
+				PrintArray(i);
+			}
+			catch (FormatException)
+			{
+				Console.WriteLine("Unable to convert {0}!", i);
+			}
+		}
 	}
 }
