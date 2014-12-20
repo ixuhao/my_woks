@@ -1,61 +1,78 @@
 " vundle
-filetype off
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
 
-Bundle 'gmarik/vundle'
-Bundle 'asins/vimcdoc'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-fugitive'
+" let g:jedi#auto_initialization = 0
+
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'ervandew/supertab'
+Plugin 'tpope/vim-fugitive'
 " zen coding
-Bundle 'vim-scripts/Emmet.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'jmcantrell/vim-virtualenv'
-Bundle 'Rykka/riv.vim'
-"Bundle 'vim-scripts/pep8'
-Bundle 'jpythonfold.vim'
+Plugin 'vim-scripts/Emmet.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'jmcantrell/vim-virtualenv'
+"Plugin 'vim-scripts/pep8'
+Plugin 'jpythonfold.vim'
+
+Plugin 'asins/vimcdoc'
 
 "Syntax
-"Bundle 'pangloss/vim-javascript'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'digitaltoad/vim-jade'
+"Plugin 'pangloss/vim-javascript'
+"Plugin 'jelera/vim-javascript-syntax'
+"Plugin 'digitaltoad/vim-jade'
 
 " Colorschemes
-Bundle 'altercation/vim-colors-solarized'
+Plugin 'altercation/vim-colors-solarized'
 
 " Completion
-Bundle 'ahayman/vim-nodejs-complete'
+"Plugin 'ahayman/vim-nodejs-complete'
 
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 "node general - gf
-Bundle 'moll/vim-node'
+"Plugin 'moll/vim-node'
+
+"clickable
+"Plugin 'Rykka/clickable.vim'
+"Plugin 'Rykka/clickable-things'
+"Plugin 'Rykka/os.vim'
+"
+"Plugin 'Rykka/riv.vim'
 
 "node snippets; dump this to vim-snippets
-" Bundle 'jamescarr/snipmate-nodejs'
+" Plugin 'jamescarr/snipmate-nodejs'
 
 "dash
-Bundle 'rizzatti/funcoo.vim'
-Bundle 'rizzatti/dash.vim'
+"Plugin 'rizzatti/funcoo.vim'
+"Plugin 'rizzatti/dash.vim'
 
-Bundle 'tpope/vim-surround'
-Bundle 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
+Plugin 'jiangmiao/auto-pairs'
+
+"octopress and markdown
+Plugin 'tangledhelix/vim-octopress'
+call vundle#end()
+filetype plugin indent on
+
+autocmd BufNewFile,BufRead *.markdown,*.textile,*.md set filetype=octopress
 
 syntax on
-filetype plugin indent on
 
 if version >= 603
     set helplang=cn
 endif
 
 if has('gui_running')
-  set background=light
+  "set background=light
+  set background=dark
   colorscheme solarized
 else
-  set background=dark
+  colorscheme morning
+  "set background=dark
 endif
 
 if has("unix")
