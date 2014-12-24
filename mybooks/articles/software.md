@@ -16,3 +16,6 @@ http://lifehacker.com/how-to-create-custom-voice-commands-with-tasker-and-aut-12
 
 http://www.androidcentral.com/hands-free-automation-tasker-and-autovoice-part-1
 
+* conky
+
+[ubuntu conkyrc](../files/conky/conkyrc_ubuntu)
