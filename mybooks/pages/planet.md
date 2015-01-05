@@ -9,4 +9,6 @@ Good RSS feeds.
 
 [Real Python](https://realpython.com/)
 
+[Real Python Resources](https://realpython.com/resources)
+
 [Miguel: The Flask Mega](http://blog.miguelgrinberg.com)
