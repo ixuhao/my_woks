@@ -27,6 +27,14 @@ http://react-china.org/t/react/175
 
 http://xcatliu.com/posts/learning-react-4-thinking-in-react.html
 
+http://www.checkme.tw/wordpress/react-notes/
+
+https://github.com/enaqx/awesome-react#flux-tutorials
+
+http://zhuanlan.zhihu.com/FrontendMagazine/19900243
+
+https://www.npmjs.com/package/react-server-example
+
 # gulpjs
 
 https://github.com/gulpjs/gulp
