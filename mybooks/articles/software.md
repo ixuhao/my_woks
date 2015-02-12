@@ -20,6 +20,3 @@ http://www.androidcentral.com/hands-free-automation-tasker-and-autovoice-part-1
 
 [ubuntu conkyrc](../files/conky/conkyrc_ubuntu)
 
-* vim
-
-[use vim](http://usevim.com/)

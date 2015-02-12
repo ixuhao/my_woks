@@ -58,14 +58,6 @@ http://blog.jobbole.com/80002/
 
 http://developer.telerik.com/featured/nativescript-a-technical-overview/
 
-* javascript
-
-[关于编写性能高效的javascript事件的技术](http://blog.jobbole.com/80170/)
-
-[当 AMD 遇上 FIS](http://blog.jobbole.com/80132/)
-
-https://github.com/fex-team/fis-amd-demo
-
 # Testing
 
 * Android Security
@@ -91,18 +83,6 @@ https://github.com/fex-team/fis-amd-demo
 [4 Point OpenCV getPerspective Transform Example](http://www.tuicool.com/articles/UNRzQbq)
 
 [warping brien](http://uberhip.com/python/image-processing/opencv/2014/10/26/warping-brien/)
-
-# Flask
-
-[Choose Your Own Adventure Presentations with Reveal.js, Python and WebSockets](https://www.twilio.com/blog/2014/11/choose-your-own-adventure-presentations-with-reveal-js-python-and-websockets.html)
-
-[Easy WebSockets with Flask and Gevent](http://blog.miguelgrinberg.com/post/easy-websockets-with-flask-and-gevent)
-
-[Video Streaming with Flask](http://blog.miguelgrinberg.com/post/video-streaming-with-flask)
-
-[Flask mega tutorial Part VI](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars)
-
-[Flask mega tutorial Part V](http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-v-user-logins)
 
 # docker
 
