@@ -59,3 +59,12 @@ https://github.com/fex-team/fis-amd-demo
 
 https://github.com/gulpjs/gulp
 
+## Android
+
+[techbrood 国内镜像](http://wear.techbrood.com/index.html)
+
+## Programming
+
+[Learn X in Y minutes](http://learnxinyminutes.com/)
+
+Todo: Learning lua from LearnXinY.

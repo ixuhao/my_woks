@@ -1,6 +1,6 @@
 # Summary
 
-This is the summart of my book. 
+This is the summary of my book. 
 
 * [Articles](articles/README.md)
     * [software](articles/software.md)
