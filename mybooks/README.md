@@ -40,7 +40,7 @@ fi
 
 http://wiki.ubuntu.com.cn/UbuntuHelp:Unison
 
-# Todo
+# Reading List
 
 * USB Reverse Tethering
 
@@ -57,6 +57,40 @@ http://tech4bros.com/android-reverse-tethering-how-to-connect-pc-internet-to-and
 http://blog.jobbole.com/80002/
 
 http://developer.telerik.com/featured/nativescript-a-technical-overview/
+
+* pyramid
+
+[pyramidoc中文官方文档](http://pyramidoc.lofter.com/)
+
+* python
+
+[Python: Tips, Tricks and Idioms - Part 2 - Decorators and context Managers](https://codefisher.org/catch/blog/2015/02/10/python-decorators-and-context-managers/)
+
+[Asynchronous Python and Databases](http://techspot.zzzeek.org/2015/02/15/asynchronous-python-and-databases/)
+
+[asyncio](https://docs.python.org/3/library/asyncio.html)
+
+[aiohttp doc](http://aiohttp.readthedocs.org/en/latest/index.html)
+
+[API-Hour](https://github.com/Eyepea/API-Hour)
+
+* tools
+
+[wrk: Modern HTTP benchmarking tool](https://github.com/wg/wrk)
+
+[wrk2: a HTTP benchmarking tool based mostly on wrk](https://github.com/giltene/wrk2)
+
+[zope2 virtual hosting](http://docs.zope.org/zope2/zope2book/VirtualHosting.html)
+
+[Plone virtual hosting](http://docs.plone.org/manage/deploying/production/ubuntu_production.html#step-5-set-up-virtual-hosting)
+
+[docker-plone](https://github.com/gauthierc/Docker/blob/master/Plone/Dockerfile)
+
+[HAProxy: ebtree](http://tech.uc.cn/?p=1031)
+
+[千万级并发HAproxy均衡负载系统介绍](http://www.oschina.net/question/17_8785)
+
+[pyrsslocal: Rss Reader link greader](http://www.xavierdupre.fr/app/pyrsslocal/helpsphinx/index.html)
 
 # Testing
 

@@ -68,3 +68,5 @@ https://github.com/gulpjs/gulp
 [Learn X in Y minutes](http://learnxinyminutes.com/)
 
 Todo: Learning lua from LearnXinY.
+
+vim need +lua, (ubuntu 12.04 using vim-nox, osx using "brew install vim --with-lua"), refer to [this](http://vimawesome.com/plugin/neocomplete-vim) and [this](http://www.codeography.com/2013/06/11/install-macvim-with-lua-support.html).
