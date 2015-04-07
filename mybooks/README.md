@@ -5,6 +5,22 @@ ReadMe
 
 Here are my daily notes.
 
+Read List:
+
+[Docker终极指南](http://my.oschina.net/u/1788105/blog/366701)
+
+[Docker最新安全性能调整分析](http://dockerone.com/article/243)
+
+[docker高级应用之动态扩展容器空间大小](http://dl528888.blog.51cto.com/2382721/1606170)
+
+http://jpetazzo.github.io/2014/01/29/docker-device-mapper-resize/
+
+[有了 Docker，用 JavaScript 框架开发的 Web 站点也能很好地支持网络爬虫的内容抓取](http://dockerone.com/article/279)
+
+[Running gitlist (or gitweb) with Gitolite](https://www.marcus-povey.co.uk/2013/10/03/running-gitlist-or-gitweb-with-gitolite/)
+
+[Spark Local Cloud on Raspberry Pi](https://www.gitbook.com/book/kennethlimcp/spark-local-cloud-on-raspberry-pi/details)
+
 # Working
 
 [cvtest/simplecv warp.ipynb](./files/simplecv_warp.ipynb)
