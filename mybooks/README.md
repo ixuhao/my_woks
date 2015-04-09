@@ -7,6 +7,16 @@ Here are my daily notes.
 
 Read List:
 
+[在Docker中运行桌面应用](http://dockerone.com/article/218)
+
+[Docker、 Weave、 树莓派（Raspberry Pi） 和 一些网络云计算](http://dockerone.com/article/56)
+
+[为GitBook编写Dockerfile](http://dockerone.com/question/22)
+
+[在Docker中运行Node.js的Web应用](http://dockerone.com/article/53)
+
+[使用Docker部署Python应用的一些最佳实践](http://dockerone.com/article/185)
+
 [Docker终极指南](http://my.oschina.net/u/1788105/blog/366701)
 
 [Docker最新安全性能调整分析](http://dockerone.com/article/243)
