@@ -199,3 +199,24 @@ for k, i in enumerate(b):
     if i == 0: # there it is.
         print k, result[k]
 ```
+
+# 20150510
+
+
+[golang, arm](http://dave.cheney.net/unofficial-arm-tarballs)
+
+[go for raspberry pi](http://dave.cheney.net/paste/go1.4.2.linux-arm~multiarch-armv6-1.tar.gz)
+
+[golang china package](http://www.golangtc.com/download/package)
+
+[gopm](http://gopm.io/download)
+
+caddy
+
+https://github.com/mholt/caddy
+
+https://caddyserver.com/docs/git
+
+hugo
+
+http://gohugo.io/
