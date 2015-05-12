@@ -222,3 +222,15 @@ hugo
 http://gohugo.io/
 
 [Build web application with golang in Chinese](https://github.com/astaxie/build-web-application-with-golang)
+
+[pelican themes](https://github.com/getpelican/pelican-themes)
+
+[pelican themes](http://pelicanthemes.com/)
+
+[pelican tutor in Chinese](http://pelican-docs-zh-cn.readthedocs.org/en/latest/getting_started.html)
+
+[使用Pelican和GitHub Pages搭建个人博客 —— 基础篇](http://www.xycoding.com/articles/2013/11/21/blog-create/)
+
+[使用Pelican和GitHub Pages搭建个人博客 —— 进阶篇](http://www.xycoding.com/articles/2013/11/22/blog-advance/)
+
+

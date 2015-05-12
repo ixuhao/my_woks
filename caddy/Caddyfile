@@ -1,7 +1,7 @@
 192.168.1.22
 
 gzip
-browse
+browse output
 
 ext .html
 log ./access.log
@@ -10,4 +10,8 @@ markdown /blog {
 	ext .md .txt
 	#css /resources/css/blog.css
 	#js /resources/js/blog.js
+}
+
+basicauth "xuhao" china2015 {
+    /output
 }
