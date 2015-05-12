@@ -220,3 +220,5 @@ https://caddyserver.com/docs/git
 hugo
 
 http://gohugo.io/
+
+[Build web application with golang in Chinese](https://github.com/astaxie/build-web-application-with-golang)
