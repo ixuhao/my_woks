@@ -223,6 +223,12 @@ http://gohugo.io/
 
 [Build web application with golang in Chinese](https://github.com/astaxie/build-web-application-with-golang)
 
+https://github.com/golang/go/wiki/IDEsAndTextEditorPlugins
+
+[monnand vimrc](https://github.com/monnand/vimrc)
+
+https://github.com/fatih/vim-go
+
 [pelican themes](https://github.com/getpelican/pelican-themes)
 
 [pelican themes](http://pelicanthemes.com/)
