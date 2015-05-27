@@ -239,4 +239,10 @@ https://github.com/fatih/vim-go
 
 [使用Pelican和GitHub Pages搭建个人博客 —— 进阶篇](http://www.xycoding.com/articles/2013/11/22/blog-advance/)
 
+golang
 
+http://docscn.studygolang.com/
+
+http://golangtc.com
+
+https://github.com/astaxie/build-web-application-with-golang
